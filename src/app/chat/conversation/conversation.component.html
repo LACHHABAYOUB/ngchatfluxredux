@@ -1,0 +1,12 @@
+<div id="conversation-container">
+    <div class="conversation-list" *ngFor="let message of messages">
+        <div class="card text-white bg-info mb-3" style="max-width: 40rem;">
+            <div class="card-header">
+                <h5>{{message.screenName}}</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{message.message}}</p>
+            </div>
+        </div>
+    </div>
+</div>

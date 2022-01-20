@@ -1,0 +1,25 @@
+#npm
+npm-debug.log
+package-json.lock
+
+#SASS
+.sass-cache/
+
+.DS_Store
+
+#ignore the build directory
+build/
+coverage/
+
+.bower_components/
+.node_modules/
+
+bower_components/
+node_modules/
+dist/
+build/
+
+firebase-debug.log
+
+# End of file
+*.org

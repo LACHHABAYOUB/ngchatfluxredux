@@ -1,0 +1,23 @@
+<div id="chat-room-view">
+
+    <div id="reg-error" *ngIf="!registration.screenName">
+        {{errorMsg}}
+    </div>
+
+    <div id="chat" *ngIf="registration.screenName">
+
+        <h2>Welcome to the <span>"{{chatMessage.chatRoom}}"</span> Chat Room</h2>
+        <form>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <input type="text-area" id="chat-message" name="chat-message" class="form-control" required [(ngModel)]="chatMessage.message">
+            </div>
+
+            <button type="submit" (click)="registerChatter()" class="btn btn-success">Let's Chat</button>
+
+            <app-conversation [messages]="chatMessages$ | async"></app-conversation>
+
+        </form>
+    </div>
+
+</div>
